@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <context-param>
+    <param-name>customersupport</param-name>
+    <param-value>mike@support.com</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>ConfigServlet</servlet-name>
+    <servlet-class>com.srivastava.onlineapp.servlets.ConfigServlet</servlet-class>
+    <init-param>
+      <param-name>dburl</param-name>
+      <param-value>jdbc:mysql://localhost:3306/onlineapp</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConfigServlet</servlet-name>
+    <url-pattern>/config</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>home</welcome-file>
+  </welcome-file-list>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location>
+  </error-page>
+  <session-config>
+    <session-timeout>5</session-timeout>
+  </session-config>
+</web-app>
