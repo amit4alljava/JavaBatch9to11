@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	<struts>
+	    <package name="user" namespace="/" extends="struts-default">
+	       <action name="msg">
+	           <result>/AnotherContent.jsp</result>
+	       </action> 
+	       <action name="displayMsg" class="com.srivastava.actions.HomeAction" method="displayMessage">
+	           <result name="success">/Content.jsp</result>
+	       </action>
+		<!-- <action name="home">
+			<result>/home.jsp</result>
+		</action> -->
+		<action name="homeAction" class="com.srivastava.actions.HomeAction">
+		    <result name="success">/home.jsp</result>
+		</action>
+		<action name="Welcome" class="com.srivastava.actions.WelcomeAction">
+			<result name="success">/welcome.jsp</result>
+		</action>
+	</package>
+
+	</struts>
